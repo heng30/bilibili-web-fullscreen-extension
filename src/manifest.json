@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Bilibili 网页全屏助手",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "自动点击Bilibili视频页面的网页全屏按钮。",
 
   "icons": {
