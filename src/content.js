@@ -1,4 +1,5 @@
 var isWideScreenButtonClicked = false;
+var tryCountsOfwideScreenButtonClicked = 0;
 
 function clickWideScreenButton() {
   const wideScreenButton = document.querySelector(
@@ -12,6 +13,11 @@ function clickWideScreenButton() {
 }
 
 const interval = setInterval(() => {
+  if (tryCountsOfwideScreenButtonClicked > 10) {
+    clearInterval(interval);
+    return;
+  }
+
   if (!isWideScreenButtonClicked) {
     const wideScreenButton = document.querySelector(
       ".bpx-player-ctrl-btn-icon.bpx-player-ctrl-web-enter",
@@ -25,6 +31,8 @@ const interval = setInterval(() => {
   } else {
     clearInterval(interval);
   }
+
+  tryCountsOfwideScreenButtonClicked += 1;
 }, 500);
 
 window.addEventListener("load", clickWideScreenButton);
