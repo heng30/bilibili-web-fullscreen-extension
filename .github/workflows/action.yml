@@ -35,6 +35,7 @@ jobs:
         run: |
           plugin=bilibili-web-fullscreen-extension
           output="$plugin-${{ env.VERSION }}.zip"
+          mv $plugin.zip $output
           echo "ASSET=$output" >> $GITHUB_ENV
 
       - name: Upload the package
