@@ -20,7 +20,8 @@ jobs:
       - run: sudo apt install zip
 
       - name: Build
-      - run: ./build.sh
+        shell: bash
+        run: ./build.sh
 
       - name: Get the release version from the tag
         shell: bash
