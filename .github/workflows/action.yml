@@ -21,8 +21,9 @@ jobs:
 
       - name: Build
         shell: bash
-        run: ./build.sh
-        run: ls ${{ github.workspace }}
+        run: |
+          ./build.sh
+          ls ${{ github.workspace }}
 
       - name: Get the release version from the tag
         shell: bash
