@@ -22,6 +22,7 @@ jobs:
       - name: Build
         shell: bash
         run: ./build.sh
+        run: ls
 
       - name: Get the release version from the tag
         shell: bash
